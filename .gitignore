@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+data/*.csv
+data/*.xlsx
+.DS_Store
+Thumbs.db
+.vscode/
