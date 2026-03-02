@@ -15,8 +15,6 @@ def install_kaggle_credentials(config_path="config/kaggle.json"):
     shutil.copy(config_path, kaggle_json_path)
     os.chmod(kaggle_json_path, 0o600)
 
-    print("Identifiants Kaggle installés !")
-
 
 def download_dataset(
     dataset_name="nikhil1e9/loan-default", output_zip="loan-default.zip"
@@ -33,7 +31,7 @@ def download_dataset(
         print(result.stderr)
         raise RuntimeError("Échec du téléchargement Kaggle")
 
-    print("Dataset téléchargé !")
+    print("Dataset téléchargé")
 
 
 def extract_dataset(zip_path="loan-default.zip", extract_to="data"):
@@ -45,7 +43,7 @@ def extract_dataset(zip_path="loan-default.zip", extract_to="data"):
     with zipfile.ZipFile(zip_path, "r") as z:
         z.extractall(extract_to)
 
-    print(f"Extraction terminée dans : {extract_to}")
+    print(f"Extraction dans : {extract_to}")
 
     return os.listdir(extract_to)
 

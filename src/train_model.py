@@ -5,7 +5,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
-from imblearn.pipeline import Pipeline  # ⚠️ utiliser imblearn Pipeline
+from imblearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE
 from xgboost import XGBClassifier
 from sklearn.metrics import classification_report, accuracy_score, roc_auc_score
@@ -99,4 +99,4 @@ print("Classification Report :\n", classification_report(y_test, y_pred))
 # Sauvegarde
 
 joblib.dump(pipeline, "models/pipeline_model.pkl")
-print("✅ Pipeline complet sauvegardé : models/pipeline_model.pkl")
+print("Pipeline complet sauvegardé : models/pipeline_model.pkl")
